@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-class FirstRoute extends StatelessWidget {
+import 'main.dart';
+
+class SecondRoute extends StatelessWidget {
   TextEditingController passwordController = TextEditingController();
   TextEditingController emailController = TextEditingController();
   TextEditingController confirmPassword = TextEditingController();
@@ -75,7 +77,9 @@ class FirstRoute extends StatelessWidget {
                     elevation: 7.0,
                     child: InkWell(
                       onTap: () {
-                        Navigator.pop(context);
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => MainScreen()),);
                       },
                       child: Center(
                         child: Text(
@@ -101,7 +105,9 @@ class FirstRoute extends StatelessWidget {
                   elevation: 10.0,
                   child: InkWell(
                     onTap: () {
-                      Navigator.of(context).pop();
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => MainScreen()),);
                     },
                     child: Center(
                       child: Text(

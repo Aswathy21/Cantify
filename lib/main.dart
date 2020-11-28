@@ -1,7 +1,10 @@
+import 'package:cantify/screens/admin/adminlogin.dart';
+import 'package:cantify/screens/user/userlogin.dart';
+import 'package:cantify/screens/manager/managerlogin.dart';
 import 'package:splashscreen/splashscreen.dart';
 import 'package:flutter/material.dart';
 import 'forgotpsw.dart';
-import 'profilepg.dart';
+import 'profile.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -21,7 +24,7 @@ class _MyappState extends State<Myapp> {
       seconds: 5,
       routeName: "/",
       backgroundColor: Colors.black,
-      image: Image.asset('assets/image1-removebg-preview.png'),
+      image: Image.asset('asset/cantify.png'),
       title: Text('Cantify',
           style: TextStyle(
               color: Colors.orange,
@@ -30,99 +33,85 @@ class _MyappState extends State<Myapp> {
               fontSize: 30)),
       loaderColor: Colors.orangeAccent,
       photoSize: 150.0,
-      navigateAfterSeconds: mainscreen(),
+      navigateAfterSeconds: MainScreen(),
     );
   }
 }
 
-class mainscreen extends StatefulWidget {
+class MainScreen extends StatefulWidget {
   @override
   _State createState() => _State();
 }
 
-class _State extends State<mainscreen> {
-  TextEditingController emailController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
+class _State extends State<MainScreen> {
   @override
+  FirstRoute createState() => FirstRoute();
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.orange,
-          title: Text('Cantify'),
-        ),
-        body: Padding(
-            padding: EdgeInsets.all(10),
-            child: ListView(
-              children: <Widget>[
-                Container(
-                    alignment: Alignment.center,
-                    padding: EdgeInsets.all(20),
-                    child: Text(
-                      'User Login',
-                      style: TextStyle(
-                          color: Colors.orange,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 20),
-                    )),
-                Container(
-                    alignment: Alignment.center,
-                    padding: EdgeInsets.all(10),
-                    child: Text(
-                      '"Simple way to find your tasty food"',
-                      style: TextStyle(fontSize: 18),
-                    )),
-                Container(
-                  padding: EdgeInsets.all(10),
-                  child: TextField(
-                    controller: emailController,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.orange)),
-                      labelText: 'Username',
-                    ),
-                  ),
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.orange,
+        title: Text("Cantify"),
+      ),
+      body: Padding(
+          padding: EdgeInsets.all(10),
+          child: ListView(
+            children: <Widget>[
+              Container(
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(40),
+                child: Text(
+                  'Sign In as ->',
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontFamily: 'Montserrat',
+                      fontWeight: FontWeight.w500,
+                      fontSize: 25),
                 ),
-                Container(
-                  padding: EdgeInsets.all(10),
-                  child: TextField(
-                    obscureText: true,
-                    controller: passwordController,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.orangeAccent)),
-                      labelText: 'Password',
-                    ),
-                  ),
-                ),
-                FlatButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => FirstRoute()),
-                    );
-                    //forgot password screentt
-                  },
-                  textColor: Colors.brown,
-                  child: Text('Forgot Password?'),
-                ),
-                Container(
-                    padding:
-                        EdgeInsets.only(top: 15.0, left: 50.0, right: 50.0),
-                    height: 50.0,
-                    child: RaisedButton(
-                      textColor: Colors.white,
-                      color: Colors.orangeAccent,
-                      child: Text('LOGIN', style: TextStyle(fontSize: 15)),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => ThirdRoute()),
-                        );
-                        print(emailController.text);
-                        print(passwordController.text);
-                      },
-                    )),
-              ],
-            )));
+              ),
+              Container(
+                  padding: EdgeInsets.only(top: 15.0, left: 50.0, right: 50.0),
+                  height: 50.0,
+                  child: RaisedButton(
+                    textColor: Colors.black,
+                    color: Colors.orange,
+                    child: Text('User', style: TextStyle(fontSize: 15)),
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>FirstRoute()),);
+                    },
+                  )),
+              Container(
+                  padding: EdgeInsets.only(top: 15.0, left: 50.0, right: 50.0),
+                  height: 50.0,
+                  child: RaisedButton(
+                    textColor: Colors.black,
+                    color: Colors.orange,
+                    child: Text('Admin', style: TextStyle(fontSize: 15)),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => FifthRoute()),
+                      );
+                    },
+                  )),
+              Container(
+                  padding: EdgeInsets.only(top: 15.0, left: 50.0, right: 50.0),
+                  height: 50.0,
+                  child: RaisedButton(
+                    textColor: Colors.black,
+                    color: Colors.orange,
+                    child:
+                    Text('Canteen Manager', style: TextStyle(fontSize: 15)),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => FouthRoute()),
+                      );
+                    },
+                  )),
+            ],
+          )),
+    );
   }
 }
+
