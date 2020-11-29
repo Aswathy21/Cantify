@@ -3,8 +3,7 @@ import 'package:cantify/screens/user/userlogin.dart';
 import 'package:cantify/screens/manager/managerlogin.dart';
 import 'package:splashscreen/splashscreen.dart';
 import 'package:flutter/material.dart';
-import 'forgotpsw.dart';
-import 'profile.dart';
+
 
 void main() {
   runApp(MaterialApp(

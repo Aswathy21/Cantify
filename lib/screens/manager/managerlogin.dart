@@ -1,5 +1,4 @@
 import 'package:cantify/forgotpsw.dart';
-import 'package:cantify/profile.dart';
 import 'package:flutter/material.dart';
 
 class FouthRoute extends StatelessWidget {
@@ -76,10 +75,10 @@ class FouthRoute extends StatelessWidget {
                       color: Colors.orangeAccent,
                       child: Text('LOGIN', style: TextStyle(fontSize: 15)),
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => ThirdRoute()),
-                        );
+                        //Navigator.push(
+                         // context,
+                         // MaterialPageRoute(builder: (context) => ThirdRoute()),
+                       // );
                         print(emailController.text);
                         print(passwordController.text);
                       },

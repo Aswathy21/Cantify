@@ -1,5 +1,5 @@
 import 'package:cantify/forgotpsw.dart';
-import 'package:cantify/profile.dart';
+import 'package:cantify/screens/admin/home2.dart';
 import 'package:flutter/material.dart';
 
 class FifthRoute extends StatelessWidget {
@@ -78,13 +78,25 @@ class FifthRoute extends StatelessWidget {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => ThirdRoute()),
+                          MaterialPageRoute(builder: (context) => HomeScreen2()
+                         ),
                         );
                         print(emailController.text);
                         print(passwordController.text);
                       },
                     )),
-              ],
-            )));
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SecondRoute()),
+                    );
+                    //forgot password screentt
+                  },
+                  textColor: Colors.brown,
+
+
+
+            )])));
   }
 }
