@@ -8,7 +8,7 @@ class Register extends StatelessWidget {
   TextEditingController unameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   TextEditingController deptController = TextEditingController();
-  TextEditingController roleController = TextEditingController();
+ // TextEditingController roleController = TextEditingController();
   TextEditingController hordsController = TextEditingController();
   TextEditingController numberController = TextEditingController();
   TextEditingController emailController = TextEditingController();
@@ -89,19 +89,6 @@ class Register extends StatelessWidget {
                       controller: hordsController,
                       decoration: InputDecoration(
                           labelText: 'HOSTLER/DAY SCHOLAR',
-                          labelStyle: TextStyle(
-                              fontFamily: 'Montserrat',
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black87),
-                          focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.orangeAccent))),
-                      //obscureText: true,
-                    ),
-                    SizedBox(height: 10.0),
-                    TextField(
-                      controller: roleController,
-                      decoration: InputDecoration(
-                          labelText: 'ROLE',
                           labelStyle: TextStyle(
                               fontFamily: 'Montserrat',
                               fontWeight: FontWeight.bold,

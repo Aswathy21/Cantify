@@ -1,17 +1,19 @@
-import 'package:cantify/forgotpsw.dart';
-import 'package:cantify/screens/admin/register.dart';
-import 'package:cantify/screens/admin/view.dart';
-import 'package:cantify/screens/user/profile.dart';
+
+import 'package:cantify/screens/manager/order.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
+import 'dish.dart';
+import 'menu2.dart';
+import 'order.dart';
 
-class HomeScreen2 extends StatefulWidget {
+
+class HomeScreen3 extends StatefulWidget {
   @override
-  _HomeScreen2State createState() => _HomeScreen2State();
+  _HomeScreen3tate createState() => _HomeScreen3tate();
 }
 
-class _HomeScreen2State extends State<HomeScreen2> {
+class _HomeScreen3tate extends State<HomeScreen3>{
   BuildContext _ctx;
 
   //void profile() {
@@ -67,14 +69,6 @@ class _HomeScreen2State extends State<HomeScreen2> {
                     height: 80,
                   ),
                   Container(
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage("assets/images2.jpg"),
-                          fit: BoxFit.cover),
-                    ),
-                  ),
-                  Container(
                     height: 50.0,
                     child: Material(
                       borderRadius: BorderRadius.circular(25.0),
@@ -84,11 +78,11 @@ class _HomeScreen2State extends State<HomeScreen2> {
                       child: InkWell(
                         onTap: () =>
                         {
-                          Navigator.push(context,MaterialPageRoute(builder: (context)=>apos()),),
+                        Navigator.push(context,MaterialPageRoute(builder: (context)=>Dish()),)
                         },
                         child: Center(
                           child: Text(
-                            'View User Info',
+                            'Add to menu',
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
@@ -112,12 +106,12 @@ class _HomeScreen2State extends State<HomeScreen2> {
                       elevation: 10.0,
                       child: InkWell(
                         onTap: () {
-                          Navigator.push(context,MaterialPageRoute(builder: (context)=>Register()),);
+                          Navigator.push(context,MaterialPageRoute(builder: (context)=>MyMenuPage2(),),);
 
                         },
                         child: Center(
                           child: Text(
-                            'Add New User',
+                            'View Existing Menu',
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
@@ -130,7 +124,33 @@ class _HomeScreen2State extends State<HomeScreen2> {
                     ),
                   ),
                   SizedBox(
-                    height: 20.0,
+                    height: 50.0,
+                  ),
+                  Container(
+                    height: 50.0,
+                    child: Material(
+                      borderRadius: BorderRadius.circular(25.0),
+                      shadowColor: Colors.orangeAccent,
+                      color: Colors.orangeAccent,
+                      elevation: 10.0,
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.push(context,MaterialPageRoute(builder: (context)=>apos2()),);
+
+                        },
+                        child: Center(
+                          child: Text(
+                            'View Orders',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'Montserrat',
+                              fontSize:20.0,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
                   ),
 
                   SizedBox(

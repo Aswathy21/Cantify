@@ -1,6 +1,9 @@
 import 'package:cantify/screens/user/profile.dart';
+import 'file:///C:/Cantify/lib/screens/admin/view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+
+import 'menu1.dart';
 
 
 class HomeScreen extends StatefulWidget {
@@ -63,14 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   SizedBox(
                     height: 80,
                   ),
-                  Container(
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage("assets/images2.jpg"),
-                          fit: BoxFit.cover),
-                    ),
-                  ),
+
                   Container(
                     height: 50.0,
                     child: Material(
@@ -109,7 +105,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       elevation: 10.0,
                       child: InkWell(
                         onTap: () {
-
+                          Navigator.push(context,MaterialPageRoute(builder: (context)=>MyMenuPage()),);
                         },
                         child: Center(
                           child: Text(
