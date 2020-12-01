@@ -9,7 +9,7 @@ class profile extends StatefulWidget {
 }
 final name="Sarah John";
 final dept='CSE';
-final role='User';
+//final role='User';
 final hords='Hostler';
 final email='sarah121@gmail.com';
 final mob ='9355477354';
@@ -62,7 +62,7 @@ class _profileState extends State<profile> {
                   children: <Widget>[
                     _specialistsCardInfo1(),
                     _specialistsCardInfo2(),
-                    _specialistsCardInfo3(),
+                    //_specialistsCardInfo3(),
                     _specialistsCardInfo4(),
                     _specialistsCardInfo5(),
                     _specialistsCardInfo6(),
@@ -251,75 +251,6 @@ class _profileState extends State<profile> {
     );
   }
 
-  Widget _specialistsCardInfo3() {
-    return Container(
-      padding: EdgeInsets.symmetric(vertical: 14.0, horizontal: 18.0),
-      margin: EdgeInsets.only(
-        bottom: 20.0,
-      ),
-      decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(12.0),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey.withOpacity(0.2),
-              spreadRadius: 1.0,
-              blurRadius: 6.0,
-            ),
-          ]),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-
-              SizedBox(
-                width: 10.0,
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  RichText(
-                    text: TextSpan(
-                      text: 'Role\n',
-                      style: TextStyle(
-                        color: Colors.orange,
-                        fontSize: 22,
-                        fontWeight: FontWeight.w400,
-                        height: 1.3,
-                      ),
-                      children: <TextSpan>[
-                        TextSpan(
-                          text: '$role',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    height: 6.0,
-                  ),
-                ],
-              ),
-            ],
-          ),
-          //Icon(
-          // LineAwesomeIcons.heart,
-          //  color: lightColor,
-          //  size: 36,
-          //),
-        ],
-      ),
-    );
-  }
 
   Widget _specialistsCardInfo4() {
     return Container(

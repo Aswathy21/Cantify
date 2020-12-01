@@ -1,5 +1,8 @@
 import 'package:cantify/forgotpsw.dart';
+import 'package:cantify/screens/manager/home3.dart';
 import 'package:flutter/material.dart';
+
+import 'dish.dart';
 
 class FouthRoute extends StatelessWidget {
   TextEditingController emailController = TextEditingController();
@@ -74,11 +77,10 @@ class FouthRoute extends StatelessWidget {
                       textColor: Colors.white,
                       color: Colors.orangeAccent,
                       child: Text('LOGIN', style: TextStyle(fontSize: 15)),
-                      onPressed: () {
-                        //Navigator.push(
-                         // context,
-                         // MaterialPageRoute(builder: (context) => ThirdRoute()),
-                       // );
+                      onPressed: () {Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => HomeScreen3(),
+                        ));
                         print(emailController.text);
                         print(passwordController.text);
                       },
