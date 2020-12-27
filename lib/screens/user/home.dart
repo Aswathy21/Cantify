@@ -105,7 +105,11 @@ class _HomeScreenState extends State<HomeScreen> {
                       elevation: 10.0,
                       child: InkWell(
                         onTap: () {
+<<<<<<< HEAD
                           Navigator.push(context,MaterialPageRoute(builder: (context)=>MyMenuPage()),);
+=======
+                         // Navigator.push(context,MaterialPageRoute(builder: (context)=>apos()),);
+>>>>>>> 8732bba471d709ae27f7b6956aa8a58091c0a1af
                         },
                         child: Center(
                           child: Text(

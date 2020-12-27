@@ -4,8 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
 import 'dish.dart';
+<<<<<<< HEAD
 import 'menu2.dart';
 import 'order.dart';
+=======
+>>>>>>> 8732bba471d709ae27f7b6956aa8a58091c0a1af
 
 
 class HomeScreen3 extends StatefulWidget {
@@ -106,7 +109,11 @@ class _HomeScreen3tate extends State<HomeScreen3>{
                       elevation: 10.0,
                       child: InkWell(
                         onTap: () {
+<<<<<<< HEAD
                           Navigator.push(context,MaterialPageRoute(builder: (context)=>MyMenuPage2(),),);
+=======
+                          //vigator.push(context,MaterialPageRoute(builder: (context)=>()),);
+>>>>>>> 8732bba471d709ae27f7b6956aa8a58091c0a1af
 
                         },
                         child: Center(
