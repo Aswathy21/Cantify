@@ -23,14 +23,14 @@ class _MyappState extends State<Myapp> {
       seconds: 5,
       routeName: "/",
       backgroundColor: Colors.black,
-      image: Image.asset('asset/cantify.png'),
-      title: Text('Cantify',
+      image: Image.asset('assets/images.png'),
+      title: Text('\n\n\nCantify',
           style: TextStyle(
               color: Colors.orange,
               fontFamily: 'Montserrat',
               fontWeight: FontWeight.w500,
               fontSize: 30)),
-      loaderColor: Colors.orangeAccent,
+      loaderColor: Colors.white,
       photoSize: 150.0,
       navigateAfterSeconds: MainScreen(),
     );
@@ -44,7 +44,7 @@ class MainScreen extends StatefulWidget {
 
 class _State extends State<MainScreen> {
   @override
-  FirstRoute createState() => FirstRoute();
+  MainScreen createState() => MainScreen();
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
@@ -76,7 +76,7 @@ class _State extends State<MainScreen> {
                     color: Colors.orange,
                     child: Text('User', style: TextStyle(fontSize: 15)),
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>FirstRoute()),);
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginPage2()),);
                     },
                   )),
               Container(
@@ -89,7 +89,7 @@ class _State extends State<MainScreen> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => FifthRoute()),
+                        MaterialPageRoute(builder: (context) => LoginPage()),
                       );
                     },
                   )),
@@ -104,7 +104,7 @@ class _State extends State<MainScreen> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => FouthRoute()),
+                        MaterialPageRoute(builder: (context) => LoginPage1()),
                       );
                     },
                   )),

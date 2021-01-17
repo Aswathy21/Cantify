@@ -4,7 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
 import 'dish.dart';
+
 import 'menu2.dart';
+
+
 
 
 
@@ -107,10 +110,15 @@ class _HomeScreen3tate extends State<HomeScreen3>{
                       child: InkWell(
                         onTap: () {
 
+
                           Navigator.push(context,MaterialPageRoute(builder: (context)=>MyMenuPage2(),),);
 
                           //vigator.push(context,MaterialPageRoute(builder: (context)=>()),);
 
+
+                          Navigator.push(context,MaterialPageRoute(builder: (context)=>MyMenuPage2(),),);
+
+                          //vigator.push(context,MaterialPageRoute(builder: (context)=>()),);
 
                         },
                         child: Center(

@@ -1,5 +1,4 @@
 import 'package:cantify/screens/user/profile.dart';
-import 'file:///C:/Cantify/lib/screens/admin/view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -105,6 +104,12 @@ class _HomeScreenState extends State<HomeScreen> {
                       elevation: 10.0,
                       child: InkWell(
                         onTap: () {
+
+                          Navigator.push(context,MaterialPageRoute(builder: (context)=>MyMenuPage()),);
+
+                         // Navigator.push(context,MaterialPageRoute(builder: (context)=>apos()),);
+
+
                           Navigator.push(context,MaterialPageRoute(builder: (context)=>MyMenuPage()),);
 
                          // Navigator.push(context,MaterialPageRoute(builder: (context)=>apos()),);

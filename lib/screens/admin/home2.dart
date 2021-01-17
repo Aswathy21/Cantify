@@ -66,14 +66,14 @@ class _HomeScreen2State extends State<HomeScreen2> {
                   SizedBox(
                     height: 80,
                   ),
-                  Container(
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage("assets/images2.jpg"),
-                          fit: BoxFit.cover),
-                    ),
-                  ),
+                  //Container(
+                   // width: double.infinity,
+                   // decoration: BoxDecoration(
+                    //  image: DecorationImage(
+                       //   image: AssetImage("assets/images2.jpg"),
+                        //  fit: BoxFit.cover),
+                   // ),
+                 // ),
                   Container(
                     height: 50.0,
                     child: Material(
@@ -112,7 +112,7 @@ class _HomeScreen2State extends State<HomeScreen2> {
                       elevation: 10.0,
                       child: InkWell(
                         onTap: () {
-                          Navigator.push(context,MaterialPageRoute(builder: (context)=>Register()),);
+                          Navigator.push(context,MaterialPageRoute(builder: (context)=>RegisterPage()),);
 
                         },
                         child: Center(
