@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:cantify/main.dart';
 
 
 class token extends StatefulWidget {
@@ -18,19 +20,20 @@ class token extends StatefulWidget {
 const mainBgColor = Color(0xFFf2f2f2);
 const darkColor = Color(0xFF2A0B35);
 const midColor = Color(0xFF522349);
-const lightColor = Color(0xFFA52C4D);
-const darkRedColor = Color(0xFFFA695C);
-const lightRedColor = Color(0xFFFD685A);
+const lightColor = Color(0xFFA52C4A);
+const darkRedColor = Color(0xFFFA641C);
+const lightRedColor = Color(0xFFFC683A);
+const orange = Color(0xFFFD684C);
 const reGradient = LinearGradient(
-  colors: <Color>[lightRedColor, lightColor,darkRedColor],
+  colors: <Color>[lightRedColor, orange,darkRedColor],
   stops: [0.0, 0.5, 1.0],
   begin: Alignment.centerLeft,
   end: Alignment.centerRight,
 );
 //const USER_IMAGE='https://ssvassgje.in/upload/salon-profile-image/demo/profile.png';
 const redGradient = LinearGradient(
-  colors: <Color>[darkRedColor, lightRedColor],
-  stops: [0.0, 1.0],
+  colors: <Color>[Colors.orange,lightRedColor, Colors.orange],
+  stops: [1.0, 0.8, 1.0],
   begin: Alignment.centerLeft,
   end: Alignment.centerRight,
 );
@@ -69,6 +72,7 @@ class _tokenState extends State<token> {
                     _specialistsCardInfo4(),
                     //_specialistsCardInfo3(),
                     _specialistsCardInfo5(),
+                    _specialistsCardInfo7(context),
 
                   ],
                 ),
@@ -83,7 +87,7 @@ class _tokenState extends State<token> {
     return Container(
       height: 200.0,
       decoration: BoxDecoration(
-        gradient: reGradient,
+        gradient: redGradient,
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(40),
           bottomRight: Radius.circular(40),
@@ -131,14 +135,15 @@ class _tokenState extends State<token> {
                 children: <Widget>[
                   RichText(
                     text: TextSpan(
-                      text: '      ORDERS PLACED    \n  ',
-                      style: TextStyle(
-                        color: Colors.deepOrange,
-                        fontSize: 32,
+                      text: '   ORDERS PLACED   \n',
+                      style: GoogleFonts.aclonica(
+                        textStyle: TextStyle(
+                        color: Colors.deepOrangeAccent,
+                        fontSize: 30,
                         //style: TextStyle(fontWeight:FontWeight.bold)
                         fontWeight: FontWeight.bold,
                         height: 1.3,
-                      ),
+                        )),
                     ),
                   ),
                   SizedBox(
@@ -313,21 +318,23 @@ class _tokenState extends State<token> {
                 children: <Widget>[
                   RichText(
                     text: TextSpan(
-                      text: '\n\n\nTOTAL\n',
-                      style: TextStyle(
-                        color: Colors.deepOrangeAccent,
-                        fontSize: 25,
+                      text: '\nTOTAL\n',
+                      style: GoogleFonts.acme(
+                        textStyle: TextStyle(
+                        color: Colors.orangeAccent,
+                        fontSize: 28,
                         fontWeight: FontWeight.bold,
                         height: 1.3,
-                      ),
+                      )),
                       children: <TextSpan>[
                         TextSpan(
                           text: '70.00 Rs.',
-                          style: TextStyle(
-                            color: Colors.deepOrange,
-                            fontSize: 40,
+                          style: GoogleFonts.aclonica(
+                            textStyle: TextStyle(
+                            color: Colors.orange,
+                            fontSize: 34,
                             fontWeight: FontWeight.bold,
-                          ),
+                            )),
                         ),
                       ],
                     ),
@@ -349,5 +356,63 @@ class _tokenState extends State<token> {
     );
   }
 
-
+  Widget _specialistsCardInfo7(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 30.0),
+      alignment: Alignment.center,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  RaisedButton(
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>MainScreen()),);
+                    },
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(80.0)),
+                    padding: const EdgeInsets.all(5.0),
+                    child: Ink(
+                      decoration: const BoxDecoration(
+                        //gradient: redGradient,
+                        color: Colors.orangeAccent,
+                        borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                      ),
+                      child: Container(
+                        constraints: const BoxConstraints(
+                            minWidth: 80.0,
+                            minHeight: 40.0), // min sizes for Material buttons
+                        alignment: Alignment.center,
+                        child:  Text(
+                          'Signout',
+                          style: GoogleFonts.itim(
+                              textStyle: TextStyle(
+                                  fontSize: 20.0,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold)
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+          //Icon(
+          // LineAwesomeIcons.heart,
+          //  color: lightColor,
+          //  size: 36,
+          //),
+        ],
+      ),
+    );
+  }
 }

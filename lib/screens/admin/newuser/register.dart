@@ -1,52 +1,24 @@
 import 'package:cantify/screens/admin/adminlogin.dart';
 import 'package:cantify/screens/admin/home2.dart';
-import 'package:cantify/screens/user/userlogin.dart';
-import 'package:cantify/screens/manager/managerlogin.dart';
-import 'package:splashscreen/splashscreen.dart';
+import 'package:cantify/screens/admin/newuser/user.dart';
 import 'package:flutter/material.dart';
+import 'file:///C:/Cantify/lib/models/user.dart';
+import 'package:cantify/data/database_helper.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'auser.dart';
+import 'muser.dart';
 
-void main() {
-  runApp(MaterialApp(
-    home: Myapp(),
-    debugShowCheckedModeBanner: false,
-  ));
-}
 
-class Myapp extends StatefulWidget {
-  @override
-  _MyappState createState() => _MyappState();
-}
 
-class _MyappState extends State<Myapp> {
-  Widget build(BuildContext context) {
-    return SplashScreen(
-      seconds: 5,
-      routeName: "/",
-      backgroundColor: Colors.black,
-      image: Image.asset('assets/images.png'),
-      title: Text('Cantify',
-          style: GoogleFonts.lobsterTwo(textStyle:TextStyle(
-              color: Colors.orange,
-              fontFamily: 'Montserrat',
-              fontWeight: FontWeight.w500,
-              fontSize: 50))),
-      loaderColor: Colors.white,
-      photoSize: 200.0,
-      navigateAfterSeconds: MainScreen(),
-    );
-  }
-}
-
-class MainScreen extends StatefulWidget {
+class MainScreen1 extends StatefulWidget {
   @override
   _State createState() => _State();
 }
 
-class _State extends State<MainScreen> {
+class _State extends State<MainScreen1> {
   @override
-  MainScreen createState() => MainScreen();
+  MainScreen1 createState() => MainScreen1();
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
@@ -62,8 +34,8 @@ class _State extends State<MainScreen> {
                 alignment: Alignment.center,
                 padding: EdgeInsets.all(40),
                 child: Text(
-                  '\n\nSign In As',
-                    style: GoogleFonts.acme(textStyle:TextStyle(
+                  '\n\nAdd New User',
+                  style: GoogleFonts.acme(textStyle:TextStyle(
                       color: Colors.black,
                       fontFamily: 'Montserrat',
                       fontWeight: FontWeight.w500,
@@ -78,7 +50,7 @@ class _State extends State<MainScreen> {
                     color: Colors.orange,
                     child: Text('USER', style: TextStyle(fontSize: 15)),
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginPage2()),);
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>RegisterPage()),);
                     },
                   )),
               Container(
@@ -91,7 +63,7 @@ class _State extends State<MainScreen> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => HomeScreen2()),
+                        MaterialPageRoute(builder: (context) => ARegisterPage()),
                       );
                     },
                   )),
@@ -106,7 +78,7 @@ class _State extends State<MainScreen> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => LoginPage1()),
+                        MaterialPageRoute(builder: (context) => MRegisterPage()),
                       );
                     },
                   )),

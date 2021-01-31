@@ -1,8 +1,7 @@
 import 'package:cantify/screens/user/profile.dart';
-import 'file:///C:/Cantify/lib/screens/admin/view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 import 'menu1.dart';
 
 
@@ -24,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.orange ,
-        title: Text("Welcome!"),
+        title: Text("Welcome!",style: GoogleFonts.adventPro()),
       ),
       body:Container(
         child: SafeArea(
@@ -40,25 +39,28 @@ class _HomeScreenState extends State<HomeScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Text('C',
-                        style: TextStyle(fontFamily: 'Montserrat',
-                          fontSize: 38.0,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.orange,
-                        ),
-                      ),Text('ANTIF',
-                        style: TextStyle(fontFamily: 'Montserrat',
-                          fontSize: 38.0,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
-                        ),
+                          style: GoogleFonts.aclonica(
+                            textStyle:TextStyle(fontFamily: 'Montserrat',
+                              fontSize: 45.0,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.orange,
+                            ),
+                          )),Text('ANTIF',
+                        style:GoogleFonts.aclonica(
+                            textStyle: TextStyle(fontFamily: 'Montserrat',
+                              fontSize: 45.0,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black,
+                            )),
                       ),
                       Text('Y',
-                        style: TextStyle(
-                          fontFamily: 'Montserrat',
-                          fontSize: 38.0,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.orange,
-                        ),
+                        style: GoogleFonts.aclonica(
+                            textStyle:TextStyle(
+                              fontFamily: 'Montserrat',
+                              fontSize: 45.0,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.orange,
+                            )),
                       ),
                     ],
                   ),
@@ -82,12 +84,13 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Center(
                           child: Text(
                             'Profile',
-                            style: TextStyle(
+                            style: GoogleFonts.acme(
+                              textStyle: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                               fontFamily: 'Montserrat',
-                              fontSize: 20.0,
-                            ),
+                              fontSize: 25.0,
+                            )),
                           ),
                         ),
                       ),
@@ -105,20 +108,22 @@ class _HomeScreenState extends State<HomeScreen> {
                       elevation: 10.0,
                       child: InkWell(
                         onTap: () {
+
                           Navigator.push(context,MaterialPageRoute(builder: (context)=>MyMenuPage()),);
 
-                         // Navigator.push(context,MaterialPageRoute(builder: (context)=>apos()),);
+                        
 
                         },
                         child: Center(
                           child: Text(
                             'Menu',
-                            style: TextStyle(
+                            style: GoogleFonts.acme(
+                              textStyle: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                               fontFamily: 'Montserrat',
-                              fontSize:20.0,
-                            ),
+                              fontSize:25.0,
+                            )),
                           ),
                         ),
                       ),

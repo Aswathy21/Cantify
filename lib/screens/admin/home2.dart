@@ -1,9 +1,12 @@
 import 'package:cantify/forgotpsw.dart';
-import 'package:cantify/screens/admin/register.dart';
+
 import 'package:cantify/screens/admin/view.dart';
-import 'package:cantify/screens/user/profile.dart';
+import 'package:cantify/screens/admin/newuser/register.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+import '../../main.dart';
 
 
 class HomeScreen2 extends StatefulWidget {
@@ -24,7 +27,7 @@ class _HomeScreen2State extends State<HomeScreen2> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.orange ,
-        title: Text("Welcome!"),
+        title: Text("Welcome!",style: GoogleFonts.adventPro()),
       ),
       body:Container(
         child: SafeArea(
@@ -40,25 +43,28 @@ class _HomeScreen2State extends State<HomeScreen2> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Text('C',
-                        style: TextStyle(fontFamily: 'Montserrat',
-                          fontSize: 38.0,
+                        style: GoogleFonts.aclonica(
+                textStyle:TextStyle(fontFamily: 'Montserrat',
+                          fontSize: 45.0,
                           fontWeight: FontWeight.bold,
                           color: Colors.orange,
                         ),
-                      ),Text('ANTIF',
-                        style: TextStyle(fontFamily: 'Montserrat',
-                          fontSize: 38.0,
+                      )),Text('ANTIF',
+                        style:GoogleFonts.aclonica(
+                          textStyle: TextStyle(fontFamily: 'Montserrat',
+                          fontSize: 45.0,
                           fontWeight: FontWeight.bold,
                           color: Colors.black,
-                        ),
+                        )),
                       ),
                       Text('Y',
-                        style: TextStyle(
+                        style: GoogleFonts.aclonica(
+                          textStyle:TextStyle(
                           fontFamily: 'Montserrat',
-                          fontSize: 38.0,
+                          fontSize: 45.0,
                           fontWeight: FontWeight.bold,
                           color: Colors.orange,
-                        ),
+                        )),
                       ),
                     ],
                   ),
@@ -66,14 +72,14 @@ class _HomeScreen2State extends State<HomeScreen2> {
                   SizedBox(
                     height: 80,
                   ),
-                  Container(
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage("assets/images2.jpg"),
-                          fit: BoxFit.cover),
-                    ),
-                  ),
+                  //Container(
+                   // width: double.infinity,
+                   // decoration: BoxDecoration(
+                    //  image: DecorationImage(
+                       //   image: AssetImage("assets/images2.jpg"),
+                        //  fit: BoxFit.cover),
+                   // ),
+                 // ),
                   Container(
                     height: 50.0,
                     child: Material(
@@ -89,12 +95,13 @@ class _HomeScreen2State extends State<HomeScreen2> {
                         child: Center(
                           child: Text(
                             'View User Info',
-                            style: TextStyle(
+                            style: GoogleFonts.acme(
+                            textStyle:TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                               fontFamily: 'Montserrat',
-                              fontSize: 20.0,
-                            ),
+                              fontSize: 25.0,
+                            )),
                           ),
                         ),
                       ),
@@ -112,19 +119,20 @@ class _HomeScreen2State extends State<HomeScreen2> {
                       elevation: 10.0,
                       child: InkWell(
                         onTap: () {
-                          Navigator.push(context,MaterialPageRoute(builder: (context)=>Register()),);
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>MainScreen1()),);
 
                         },
                         child: Center(
                           child: Text(
                             'Add New User',
-                            style: TextStyle(
+                              style: GoogleFonts.acme(
+                            textStyle: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                               fontFamily: 'Montserrat',
-                              fontSize:20.0,
+                              fontSize:25.0,
                             ),
-                          ),
+                          )),
                         ),
                       ),
                     ),
@@ -134,16 +142,57 @@ class _HomeScreen2State extends State<HomeScreen2> {
                   ),
 
                   SizedBox(
-                    height: 20.0,
+                    height: 50.0,
                   ),
+                  Container(
+                    padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 30.0),
+                    alignment: Alignment.center,
+                    child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    RaisedButton(
+                                        onPressed: () {
+                                          Navigator.push(context, MaterialPageRoute(builder: (context)=>MainScreen()),);
+                                        },
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.circular(80.0)),
+                                        padding: const EdgeInsets.all(5.0),
+                                        child: Ink(
+                                            decoration: const BoxDecoration(
+                                              //gradient: redGradient,
+                                              color: Colors.orangeAccent,
+                                              borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                                            ),
+                                            child: Container(
+                                                constraints: const BoxConstraints(
+                                                    minWidth: 80.0,
+                                                    minHeight: 40.0), // min sizes for Material buttons
+                                                alignment: Alignment.center,
+                                                child:  Text(
+                                                    'Signout',
+                                                    style: GoogleFonts.itim(
+                                                        textStyle: TextStyle(
+                                                            fontSize: 20.0,
+                                                            color: Colors.white,
+                                                            fontWeight: FontWeight.bold)
 
-                ],
-              ),
-            ),
+                                                    )))))],
+                                ),
+                              ]),
 
-          ),
-        ),
-      ),
-    );
+                        ]),
+                  ),
+                ]),
+
+            )))));
   }
 }

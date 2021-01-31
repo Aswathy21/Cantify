@@ -1,5 +1,6 @@
 import 'package:cantify/screens/user/token.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(MaterialApp( home: MyMenuPage(),
@@ -33,12 +34,14 @@ class _MenuPageState extends State<MyMenuPage> {
                 // children: <Widget>[
                 Padding(
                   padding: const EdgeInsets.all(10.0),
-                  child: Text("Today's Menu",textScaleFactor: 1.5,style: TextStyle(fontWeight:FontWeight.bold),),
+                  child: Text("Today's Menu",textScaleFactor: 1.5,style: GoogleFonts.acme(
+                    textStyle:TextStyle(fontSize: 20.0,fontWeight:FontWeight.bold)),),
                 ),
                 Row(
                     children: <Widget>[
                       SizedBox(width: 10,),
-                      Text('NO     NAME                      RATE',style: TextStyle(fontSize: 18.0,fontWeight:FontWeight.bold), ),
+                      Text('NO     NAME                      RATE',style: GoogleFonts.acme(
+                      textStyle:TextStyle(fontSize: 18.0,fontWeight:FontWeight.bold)), ),
                     ]),
                 Row(
                     children: <Widget>[

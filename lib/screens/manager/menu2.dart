@@ -4,7 +4,7 @@ import 'home3.dart';
 
 void main() {
   runApp(MaterialApp( home: MyMenuPage2(),
-    debugShowCheckedModeBanner: false,));
+      debugShowCheckedModeBanner: false,));
 }
 
 class MyMenuPage2 extends StatefulWidget {
@@ -155,6 +155,7 @@ class _MenuPage2State extends State<MyMenuPage2> {
 
                         },
                         child: Center(
+
                           child: Text(
                             'Back',
                             style: TextStyle(
