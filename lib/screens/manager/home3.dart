@@ -122,7 +122,11 @@ class _HomeScreen3tate extends State<HomeScreen3>{
                           //vigator.push(context,MaterialPageRoute(builder: (context)=>()),);
 
 
+<<<<<<< HEAD
                          // Navigator.push(context,MaterialPageRoute(builder: (context)=>MyMenuPage2(),),);
+=======
+                          Navigator.push(context,MaterialPageRoute(builder: (context)=>MyMenuPage2(),),);
+>>>>>>> 504513248c2e60cf114f7caf015cdaa648bee175
 
                           //vigator.push(context,MaterialPageRoute(builder: (context)=>()),);
 

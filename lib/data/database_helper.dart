@@ -1,9 +1,14 @@
 import 'dart:io';
+<<<<<<< HEAD
 import 'package:cantify/models/menu.dart';
 import 'package:cantify/screens/user/profile.dart';
 import 'package:cantify/models/user.dart';
 import 'package:cantify/models/manager.dart';
 import 'package:cantify/models/admin.dart';
+=======
+import 'package:cantify/screens/user/profile.dart';
+import 'package:cantify/data/user.dart';
+>>>>>>> 504513248c2e60cf114f7caf015cdaa648bee175
 import 'package:path/path.dart';
 import 'dart:async';
 import 'package:path_provider/path_provider.dart';
@@ -15,6 +20,7 @@ class DatabaseHelper {
 
   static Database _db;
   final String tableUser = "User";
+<<<<<<< HEAD
   final String tableAdmin = "Admin";
   final String tableManager = "Manager";
   final String tableMenu = "Menu";
@@ -26,6 +32,11 @@ class DatabaseHelper {
   final String columnMPassword = "mpassword";
   final String columnDishname = "dishname";
   final String columnRate = "rate";
+=======
+  //final String columnName = "name";
+  final String columnUserName = "username";
+  final String columnPassword = "password";
+>>>>>>> 504513248c2e60cf114f7caf015cdaa648bee175
 
   Future<Database> get db async {
     if (_db != null) {
@@ -39,7 +50,11 @@ class DatabaseHelper {
 
   initDb() async {
     Directory documentDirectory = await getApplicationDocumentsDirectory();
+<<<<<<< HEAD
     String path = join(documentDirectory.path, "project2.db");
+=======
+    String path = join(documentDirectory.path, "main.db");
+>>>>>>> 504513248c2e60cf114f7caf015cdaa648bee175
     var ourDb = await openDatabase(path, version: 1, onCreate: _onCreate);
     return ourDb;
   }
@@ -48,6 +63,7 @@ class DatabaseHelper {
     await db.execute(
         "CREATE TABLE User(id INTEGER PRIMARY KEY, name TEXT, username TEXT, password TEXT, dept TEXT, hords TEXT,  email TEXT, number INTEGER,flaglogged TEXT)");
     print("Table is created");
+<<<<<<< HEAD
 
     await db.execute(
         "CREATE TABLE Admin(aid INTEGER PRIMARY KEY, aname TEXT, ausername TEXT, apassword TEXT, adept TEXT, ahords TEXT,  aemail TEXT, anumber INTEGER,flaglogged TEXT)");
@@ -72,6 +88,11 @@ class DatabaseHelper {
     return await db.query("User", User.toMap(), where: "id = ?", whereArgs: [User]);
   }*/
   //user insertion
+=======
+  }
+
+  //insertion
+>>>>>>> 504513248c2e60cf114f7caf015cdaa648bee175
   Future<int> saveUser(User user) async {
     var dbClient = await db;
     print(user.name);
@@ -81,7 +102,11 @@ class DatabaseHelper {
     return res;
   }
 
+<<<<<<< HEAD
   //user deletion
+=======
+  //deletion
+>>>>>>> 504513248c2e60cf114f7caf015cdaa648bee175
   Future<int> deleteUser(User user) async {
     var dbClient = await db;
     int res = await dbClient.delete("User");
@@ -105,6 +130,7 @@ class DatabaseHelper {
       return null;
     }
   }
+<<<<<<< HEAD
   //admin insertion
   Future<int> saveAdmin(Admin admin) async {
     var dbClient = await db;
@@ -194,3 +220,6 @@ class DatabaseHelper {
     return res;
   }
 }
+=======
+}
+>>>>>>> 504513248c2e60cf114f7caf015cdaa648bee175

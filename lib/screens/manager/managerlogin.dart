@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 import 'package:cantify/models/manager.dart';
+=======
+import 'package:cantify/data/user.dart';
+>>>>>>> 504513248c2e60cf114f7caf015cdaa648bee175
 import 'package:cantify/forgotpsw.dart';
 import 'package:cantify/screens/manager/home3.dart';
 import 'package:flutter/material.dart';
 import 'package:cantify/screens/manager/mlogin_presenter.dart';
+<<<<<<< HEAD
 import 'package:google_fonts/google_fonts.dart';
+=======
+>>>>>>> 504513248c2e60cf114f7caf015cdaa648bee175
 
 import 'dish.dart';
 
@@ -66,6 +73,7 @@ class _LoginPage1State extends State<LoginPage1> implements LoginPageContract {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
         new Text(
+<<<<<<< HEAD
           '\nCanteen Manager Login',
             style: GoogleFonts.acme(
               textStyle:TextStyle(
@@ -83,11 +91,29 @@ class _LoginPage1State extends State<LoginPage1> implements LoginPageContract {
                     fontFamily: 'Montserrat',
                     fontSize: 15
                 ))),
+=======
+          '\nCanteen Manager Login\n',
+          style: TextStyle(
+              color: Colors.orange,
+              fontWeight: FontWeight.w500,
+              fontSize: 20),
+        ),
+        new Text(
+            "'A simple way to find your tasty food!'",
+            textScaleFactor: 2.0,
+            style: TextStyle(
+                color: Colors.black,
+                //fontWeight: FontWeight.bold,
+                fontFamily: 'Montserrat',
+                fontSize: 10
+            )),
+>>>>>>> 504513248c2e60cf114f7caf015cdaa648bee175
         new Form(
           key: formKey,
           child: new Column(
             children: <Widget>[
               new Padding(
+<<<<<<< HEAD
                 padding: const EdgeInsets.all(10.0),
                 child: new TextFormField(
                   onSaved: (val) => _username = val,
@@ -101,10 +127,26 @@ class _LoginPage1State extends State<LoginPage1> implements LoginPageContract {
                   onSaved: (val) => _password = val,
                   decoration: new InputDecoration(labelText: "Password"),
                 ),
+=======
+                padding: const EdgeInsets.all(20.0),
+                child: new TextFormField(
+                  onSaved: (val) => _username = val,
+                  decoration: new InputDecoration(labelText: "Username"),
+                ),
+              ),
+              new Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: new TextFormField(
+                  obscureText: true,
+                  onSaved: (val) => _password = val,
+                  decoration: new InputDecoration(labelText: "Password"),
+                ),
+>>>>>>> 504513248c2e60cf114f7caf015cdaa648bee175
               )
             ],
           ),
         ),
+<<<<<<< HEAD
         //FlatButton(
         //onPressed: () {
         // Navigator.push(
@@ -118,6 +160,21 @@ class _LoginPage1State extends State<LoginPage1> implements LoginPageContract {
         // ),
         new Padding(
             padding: const EdgeInsets.all(15.0),
+=======
+        FlatButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => SecondRoute()),
+            );
+            //forgot password screentt
+          },
+          textColor: Colors.brown,
+          child: Text('Forgot Password?'),
+        ),
+        new Padding(
+            padding: const EdgeInsets.all(10.0),
+>>>>>>> 504513248c2e60cf114f7caf015cdaa648bee175
             child: loginBtn),
 
         //registerBtn
@@ -127,7 +184,11 @@ class _LoginPage1State extends State<LoginPage1> implements LoginPageContract {
     return new Scaffold(
       appBar: new AppBar(
         backgroundColor: Colors.orange,
+<<<<<<< HEAD
         title: Text("Cantify",style: GoogleFonts.abel()),
+=======
+        title: new Text("Cantify"),
+>>>>>>> 504513248c2e60cf114f7caf015cdaa648bee175
       ),
       key: scaffoldKey,
       body: new Container(
@@ -148,9 +209,15 @@ class _LoginPage1State extends State<LoginPage1> implements LoginPageContract {
   }
 
   @override
+<<<<<<< HEAD
   void onLoginSuccess(Manager user) async {
     // TODO: implement onLoginSuccess
     if (user.musername == "") {
+=======
+  void onLoginSuccess(User user) async {
+    // TODO: implement onLoginSuccess
+    if (user.username == "") {
+>>>>>>> 504513248c2e60cf114f7caf015cdaa648bee175
       _showSnackBar("Login not successful");
     } else {
       _showSnackBar(user.toString());

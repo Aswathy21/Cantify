@@ -1,5 +1,9 @@
 import 'package:cantify/data/rest-data.dart';
+<<<<<<< HEAD
 import 'package:cantify/models/user.dart';
+=======
+import 'package:cantify/data/user.dart';
+>>>>>>> 504513248c2e60cf114f7caf015cdaa648bee175
 
 abstract class LoginPageContract{
   void onLoginSuccess(User user);

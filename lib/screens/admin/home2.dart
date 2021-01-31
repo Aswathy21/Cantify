@@ -119,7 +119,11 @@ class _HomeScreen2State extends State<HomeScreen2> {
                       elevation: 10.0,
                       child: InkWell(
                         onTap: () {
+<<<<<<< HEAD
                           Navigator.push(context, MaterialPageRoute(builder: (context)=>MainScreen1()),);
+=======
+                          Navigator.push(context,MaterialPageRoute(builder: (context)=>RegisterPage()),);
+>>>>>>> 504513248c2e60cf114f7caf015cdaa648bee175
 
                         },
                         child: Center(

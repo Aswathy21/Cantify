@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import 'package:cantify/models/admin.dart';
 import 'package:cantify/forgotpsw.dart';
 import 'package:cantify/screens/admin/home2.dart';
@@ -5,6 +6,14 @@ import 'file:///C:/Cantify/lib/screens/admin/newuser/register.dart';
 import 'package:flutter/material.dart';
 import 'package:cantify/screens/admin/alogin_presenter.dart';
 import 'package:google_fonts/google_fonts.dart';
+=======
+import 'package:cantify/data/user.dart';
+import 'package:cantify/forgotpsw.dart';
+import 'package:cantify/screens/admin/home2.dart';
+import 'package:cantify/screens/admin/register.dart';
+import 'package:flutter/material.dart';
+import 'package:cantify/screens/admin/alogin_presenter.dart';
+>>>>>>> 504513248c2e60cf114f7caf015cdaa648bee175
 
 class LoginPage extends StatefulWidget {
   @override
@@ -25,9 +34,15 @@ class _LoginPageState extends State<LoginPage> implements LoginPageContract {
     _presenter = new LoginPagePresenter(this);
   }
 
+<<<<<<< HEAD
   //void _register() {
    // Navigator.push(context,MaterialPageRoute(builder: (context)=>RegisterPage()),);
   //}
+=======
+  void _register() {
+    Navigator.push(context,MaterialPageRoute(builder: (context)=>RegisterPage()),);
+  }
+>>>>>>> 504513248c2e60cf114f7caf015cdaa648bee175
 
   void _submit() {
     final form = formKey.currentState;
@@ -55,16 +70,26 @@ class _LoginPageState extends State<LoginPage> implements LoginPageContract {
       child: new Text("Login"),
       color: Colors.orangeAccent,
     );
+<<<<<<< HEAD
     // var registerBtn = new RaisedButton(
     // padding: const EdgeInsets.all(10.0),
     // onPressed: _register,
     // child: new Text("Register"),
     // color: Colors.orangeAccent,
     // );
+=======
+    var registerBtn = new RaisedButton(
+      padding: const EdgeInsets.all(10.0),
+      onPressed: _register,
+      child: new Text("Register"),
+      color: Colors.orangeAccent,
+    );
+>>>>>>> 504513248c2e60cf114f7caf015cdaa648bee175
     var loginForm = new Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
         new Text(
+<<<<<<< HEAD
             '\nAdmin Login',
             style: GoogleFonts.acme(
               textStyle:TextStyle(
@@ -82,19 +107,44 @@ class _LoginPageState extends State<LoginPage> implements LoginPageContract {
                     fontFamily: 'Montserrat',
                     fontSize: 15
                 ))),
+=======
+    '\nAdmin Login\n',
+      style: TextStyle(
+          color: Colors.orange,
+          fontWeight: FontWeight.w500,
+          fontSize: 20),
+    ),
+        new Text(
+            "'A simple way to find your tasty food!'",
+            textScaleFactor: 2.0,
+            style: TextStyle(
+                color: Colors.black,
+                //fontWeight: FontWeight.bold,
+                fontFamily: 'Montserrat',
+                fontSize: 10
+            )),
+>>>>>>> 504513248c2e60cf114f7caf015cdaa648bee175
         new Form(
           key: formKey,
           child: new Column(
             children: <Widget>[
               new Padding(
+<<<<<<< HEAD
                 padding: const EdgeInsets.all(10.0),
+=======
+                padding: const EdgeInsets.all(20.0),
+>>>>>>> 504513248c2e60cf114f7caf015cdaa648bee175
                 child: new TextFormField(
                   onSaved: (val) => _username = val,
                   decoration: new InputDecoration(labelText: "Username"),
                 ),
               ),
               new Padding(
+<<<<<<< HEAD
                 padding: const EdgeInsets.all(10.0),
+=======
+                padding: const EdgeInsets.all(20.0),
+>>>>>>> 504513248c2e60cf114f7caf015cdaa648bee175
                 child: new TextFormField(
                   obscureText: true,
                   onSaved: (val) => _password = val,
@@ -104,6 +154,7 @@ class _LoginPageState extends State<LoginPage> implements LoginPageContract {
             ],
           ),
         ),
+<<<<<<< HEAD
         //FlatButton(
         //onPressed: () {
         // Navigator.push(
@@ -120,13 +171,24 @@ class _LoginPageState extends State<LoginPage> implements LoginPageContract {
             child: loginBtn),
 
         //registerBtn
+=======
+        new Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: loginBtn),
+
+        registerBtn
+>>>>>>> 504513248c2e60cf114f7caf015cdaa648bee175
       ],
     );
 
     return new Scaffold(
       appBar: new AppBar(
         backgroundColor: Colors.orange,
+<<<<<<< HEAD
         title: Text("Cantify",style: GoogleFonts.abel()),
+=======
+        title: new Text("Cantify"),
+>>>>>>> 504513248c2e60cf114f7caf015cdaa648bee175
       ),
       key: scaffoldKey,
       body: new Container(
@@ -147,9 +209,15 @@ class _LoginPageState extends State<LoginPage> implements LoginPageContract {
   }
 
   @override
+<<<<<<< HEAD
   void onLoginSuccess(Admin user) async {
     // TODO: implement onLoginSuccess
     if (user.ausername == "") {
+=======
+  void onLoginSuccess(User user) async {
+    // TODO: implement onLoginSuccess
+    if (user.username == "") {
+>>>>>>> 504513248c2e60cf114f7caf015cdaa648bee175
       _showSnackBar("Login not successful");
     } else {
       _showSnackBar(user.toString());

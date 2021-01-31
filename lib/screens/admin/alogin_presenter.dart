@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 import 'package:cantify/data/rest2-data.dart';
 import 'package:cantify/models/admin.dart';
 
 abstract class LoginPageContract{
   void onLoginSuccess(Admin user);
+=======
+import 'package:cantify/data/rest-data.dart';
+import 'package:cantify/data/user.dart';
+
+abstract class LoginPageContract{
+  void onLoginSuccess(User user);
+>>>>>>> 504513248c2e60cf114f7caf015cdaa648bee175
   void onLoginError(String error);
 }
 

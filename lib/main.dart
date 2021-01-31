@@ -26,6 +26,7 @@ class _MyappState extends State<Myapp> {
       routeName: "/",
       backgroundColor: Colors.black,
       image: Image.asset('assets/images.png'),
+<<<<<<< HEAD
       title: Text('Cantify',
           style: GoogleFonts.lobsterTwo(textStyle:TextStyle(
               color: Colors.orange,
@@ -34,6 +35,16 @@ class _MyappState extends State<Myapp> {
               fontSize: 50))),
       loaderColor: Colors.white,
       photoSize: 200.0,
+=======
+      title: Text('\n\n\nCantify',
+          style: TextStyle(
+              color: Colors.orange,
+              fontFamily: 'Montserrat',
+              fontWeight: FontWeight.w500,
+              fontSize: 30)),
+      loaderColor: Colors.white,
+      photoSize: 150.0,
+>>>>>>> 504513248c2e60cf114f7caf015cdaa648bee175
       navigateAfterSeconds: MainScreen(),
     );
   }
@@ -91,7 +102,11 @@ class _State extends State<MainScreen> {
                     onPressed: () {
                       Navigator.push(
                         context,
+<<<<<<< HEAD
                         MaterialPageRoute(builder: (context) => HomeScreen2()),
+=======
+                        MaterialPageRoute(builder: (context) => LoginPage()),
+>>>>>>> 504513248c2e60cf114f7caf015cdaa648bee175
                       );
                     },
                   )),

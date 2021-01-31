@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 
 import 'package:cantify/models/user.dart';
+=======
+import 'dart:async';
+import 'package:cantify/data/user.dart';
+>>>>>>> 504513248c2e60cf114f7caf015cdaa648bee175
 import 'package:cantify/data/database_helper.dart';
 
 
@@ -13,7 +18,11 @@ class RestData {
     var user = new User(null, username, password, null, null, null, null, null);
     var db = new DatabaseHelper();
     var userRetorno = new User(null, null, null, null, null, null, null, null);
+<<<<<<< HEAD
     userRetorno = (await db.selectUser(user)) as User;
+=======
+    userRetorno = await db.selectUser(user);
+>>>>>>> 504513248c2e60cf114f7caf015cdaa648bee175
     if (userRetorno != null) {
       flagLogged = "logged";
       return new Future.value(new User(

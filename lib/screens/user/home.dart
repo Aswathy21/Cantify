@@ -109,6 +109,14 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: InkWell(
                         onTap: () {
 
+<<<<<<< HEAD
+=======
+                          Navigator.push(context,MaterialPageRoute(builder: (context)=>MyMenuPage()),);
+
+                         // Navigator.push(context,MaterialPageRoute(builder: (context)=>apos()),);
+
+
+>>>>>>> 504513248c2e60cf114f7caf015cdaa648bee175
                           Navigator.push(context,MaterialPageRoute(builder: (context)=>MyMenuPage()),);
 
                         
